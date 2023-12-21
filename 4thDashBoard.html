@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Startup Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ececec;
+            /* overflow-y: hidden; */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            /* padding: 50px; */
+            
+        }
+
+        .left-half, .right-half {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .left-half {
+            width: 50%;
+            background-color: #f4f4f4;
+        }
+
+        .right-half {
+            width: 50%;
+            background-color: #d8d8d8;
+        }
+
+        button {
+            font-size: 24px;
+            padding: 15px 30px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .get-info {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .give-info {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .title {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 48px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <div class="title">Welcome to our Agriculture Startup!</div>
+            <button class="get-info" onclick="getInfo()">GET INFO</button>
+        </div>
+        <div class="right-half">
+            <button class="give-info" onclick="giveInfo()">GIVE INFO</button>
+        </div>
+    </div>
+    <script>
+        function getInfo() {
+            alert('Here is some info you wanted.');
+        }
+
+        function giveInfo() {
+            alert('Thank you for giving us this information.');
+        }
+    </script>
+</body>
+</html>

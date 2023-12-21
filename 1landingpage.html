@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .background-image {
+            /* background-image: url('https://source.unsplash.com/1600x900/?agriculture'); */
+            background-image: url('landingpageimg.jpg');
+            background-size: cover;
+            background-position: center;
+            animation-name: opac;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            
+        }
+        /* Custom styles for additional tweaks */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            animation-name: opac;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            
+        }
+
+        @keyframes opac{
+            0%{
+                opacity : 0;
+            }
+            50%{
+                opacity : .5;
+            }
+            100%{
+                opacity : 1;
+            }
+        }
+    </style>
+</head>
+<body class="background-image">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="form-container p-8 rounded-lg shadow-lg max-w-md w-full space-y-8">
+            <div class="text-center">
+                <h2 class="mt-6 text-3xl font-bold text-gray-900">Welcome</h2>
+                <p class="mt-2 text-sm text-gray-600">Please sign up or log in to continue</p>
+            </div>
+            <div class="mt-8 space-y-6">
+                <div class="rounded-md shadow-sm">
+                    <div>
+                        <button id="signup-btn" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                            Sign Up
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <button id="login-btn" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-green-600 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                            Log In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#signup-btn').click(function() {
+                // Implement sign up logic here
+                window.open("2nd_Page.html", "_blank");  
+            });
+            $('#login-btn').click(function() {
+                // Implement login logic here
+                window.open("3loginPage.html", "_blank");  
+            });
+        });
+    </script>
+</body>
+</html>
